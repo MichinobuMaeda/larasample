@@ -1,95 +1,84 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+@section('content')
+<article class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-7 large-6 cell">
+      <h1>Laravel と Foundation のサンプル</h1>
+      <p class="subheader">
+        このページのレイアウトは <a href="https://foundation.zurb.com">Foundation</a> の
+        <a href="https://foundation.zurb.com/templates-previews-sites-f6/real-estate.html">"Real Estate or Travel"</a>
+        を手直ししたものです。
+        Internet Explorer の 9 以降のバージョンに対応しています。
+        スマートフォンの小さな画面でも読むことができるので、
+        パソコンの場合はブラウザのウィンドウの幅を狭くして試してみてください。
+      </p>
+    </div>
+    <div class="show-for-large large-3 cell">
+      <img src="https://placehold.it/400x370&text=Sample" alt="サンプル画像">
+    </div>
+    <div class="medium-5 large-3 cell">
+      <div class="callout secondary">
+        <form action="http://www.google.co.jp/search" method="get">
+          <div class="grid-x">
+            <div class="small-12 cell">
+              <input type="text" name="q" placeholder="Googleサイト内検索">
             </div>
-        </div>
-    </body>
-</html>
+            <div class="small-12 cell">
+              <button type="submit" name="btnG" class="button">検索</button>
+              <input type="hidden" name="hl" value="ja">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="domains" value="michinobu.jp">
+              <input type="hidden" name="sitesearch" value="michinobu.jp">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="small-12">
+        <p>
+          このサンプルのソースは
+          <a href="https://github.com/MichinobuMaeda/larasample">GuiHub</a>
+          のリポジトリをご参照ください。
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <hr>
+  </div>
+  <div class="">
+    <p class="lead">製品とサービスのご紹介</p>
+  </div>
+  <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+    <div class="cell">
+      <div class="callout">
+        <p>製品１</p>
+        <p><img src="https://placehold.it/400x370&text=Sample" alt="サンプル画像"></p>
+        <p class="lead">製品１の説明</p>
+        <p class="subheader">
+          製品１の説明の本文です。製品１の説明の本文です。製品１の説明の本文です。製品１の説明の本文です。
+        </p>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="callout">
+        <p>製品２</p>
+        <p><img src="https://placehold.it/400x370&text=Sample" alt="サンプル画像"></p>
+        <p class="lead">製品２の説明</p>
+        <p class="subheader">
+          製品２の説明の本文です。製品２の説明の本文です。製品２の説明の本文です。製品２の説明の本文です。
+        </p>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="callout">
+        <p>サービス</p>
+        <p><img src="https://placehold.it/400x370&text=Sample" alt="サンプル画像"></p>
+        <p class="lead">サービス</p>
+        <p class="subheader">
+          サービスの説明の本文です。サービスの説明の本文です。サービスの説明の本文です。サービスの説明の本文です。
+        </p>
+      </div>
+    </div>
+  </div>
+</article>
+@endsection
