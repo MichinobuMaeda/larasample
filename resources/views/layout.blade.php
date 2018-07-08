@@ -25,10 +25,24 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><a href="#">ゲスト</a></li>
-      <li><a class="button">ログイン／新規登録</a></li>
+      <li class="menu-text">{{ Auth::user() ? Auth::user()->name : 'ゲスト' }}</li>
+@if (Auth::user())
+      <li>
+        <a
+          href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+        >ログアウト</a>
+      </li>
+@else
+      <li><a href="{{ route('login') }}">ログイン</a></li>
+      <li><a href="{{ route('register') }}">新規登録</a></li>
+@endif
     </ul>
   </div>
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+  </form>
 </div>
 <br>
 

@@ -18,27 +18,32 @@
       <img src="https://placehold.it/400x370&text=Sample" alt="サンプル画像">
     </div>
     <div class="medium-5 large-3 cell">
-      <div class="callout secondary">
-        <form action="http://www.google.co.jp/search" method="get">
-          <div class="grid-x">
-            <div class="small-12 cell">
-              <input type="text" name="q" placeholder="Googleサイト内検索">
-            </div>
-            <div class="small-12 cell">
-              <button type="submit" name="btnG" class="button">検索</button>
-              <input type="hidden" name="hl" value="ja">
-              <input type="hidden" name="ie" value="UTF-8">
-              <input type="hidden" name="domains" value="michinobu.jp">
-              <input type="hidden" name="sitesearch" value="michinobu.jp">
-            </div>
+      <form action="http://www.google.co.jp/search" method="get">
+        <div class="grid-x">
+          <div class="small-8">
+            <input type="text" name="q" placeholder="Googleで検索">
           </div>
-        </form>
-      </div>
+          <div class="small-4" style="text-align:center">
+            <button type="submit" name="btnG" class="button">検索</button>
+            <input type="hidden" name="hl" value="ja">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="hidden" name="domains" value="michinobu.jp">
+            <input type="hidden" name="sitesearch" value="michinobu.jp">
+          </div>
+        </div>
+      </form>
       <div class="small-12">
         <p>
           このサンプルのソースは
           <a href="https://github.com/MichinobuMaeda/larasample">GuiHub</a>
           のリポジトリをご参照ください。
+        </p>
+        <div>
+          テスト用のメールアドレス : 64116d00ef-7012f0@inbox.mailtrap.io
+        </div>
+        <div>
+          テスト用のパスワード : password
+        </div>
       </div>
     </div>
   </div>
